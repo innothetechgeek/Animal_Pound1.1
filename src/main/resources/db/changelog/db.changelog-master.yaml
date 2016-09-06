@@ -14,22 +14,7 @@ databaseChangeLog:
                     primaryKey: true
                     nullable: false
               - column:
-                  name: animal_name
-                  type: varchar(255)
-                  constraints:
-                    nullable: true
-              - column:
-                  name: name
-                  type: varchar(255)
-                  constraints:
-                    nullable: true
-              - column:
-                  name: surname
-                  type: varchar(255)
-                  constraints:
-                    nullable: true
-              - column:
-                  name: phone_number
+                  name: animalname
                   type: varchar(255)
                   constraints:
                     nullable: true
