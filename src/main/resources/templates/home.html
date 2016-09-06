@@ -21,11 +21,13 @@
             <form th:object="${insertRecord}" method="POST">
                 <div class="form-group">
                     <label for="data">Name</label>
-                    <input id="data" type="text" class="form-control" placeholder="Name" th:field="*{data}" />
+                    <input id="data" type="text" class="form-control" placeholder="Animal name" th:field="*{animalName}" />
                      <label for="data">Surname</label>
-                    <input id="data" type="text" class="form-control" placeholder="Surname" th:field="*{name}" />
-                     <label for="data">Phone number</label>
-                     <input id="data" type="text" class="form-control" placeholder="Surname" th:field="*{surname}" />
+                    <input id="data" type="text" class="form-control" placeholder=" Customer name" th:field="*{name}" />
+                     <label for="data">Surname</label>
+                     <input id="data" type="text" class="form-control" placeholder="Customer Surname" th:field="*{surname}" />
+                     <label for="data">Phone Number</label>
+                     <input id="data" type="text" class="form-control" placeholder="Phone Number" th:field="*{phoneNumber}" />
                 </div>
                 <button type="submit" class="btn btn-default">Submit</button>
             </form>
@@ -43,9 +45,10 @@
                 </thead>
                 <tbody>
                     <tr th:each="record : ${records}">
-                        <td th:text="${record.data}">Some text</td>
+                        <td th:text="${record.animalName}">Some text</td>
                         <td th:text="${record.name}">Some text</td>
                         <td th:text="${record.surname}">Some text</td>
+                        <td th:text="${record.phoneNumber}">Some text</td>
                     </tr>
                 </tbody>
             </table>
