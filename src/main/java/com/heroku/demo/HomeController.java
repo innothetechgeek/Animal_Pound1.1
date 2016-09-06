@@ -24,38 +24,38 @@ import org.springframework.web.util.UriComponentsBuilder;
 @RequestMapping("/")
 public class HomeController {
 
-    private RecordRepository repository;
+    private AdoptionRepository repository;
 
     @Autowired
-    public HomeController(RecordRepository repository) {
+    public HomeController(AdoptionRepository repository) {
         this.repository = repository;
     }
 
     @RequestMapping(method = RequestMethod.GET)
     public String home(ModelMap model) {
-        List<Record> records = repository.findAll();
+        List<Adoption> records = repository.findAll();
         model.addAttribute("records", records);
-        model.addAttribute("insertRecord", new Record());
+        model.addAttribute("insertRecord", new Adoption());
         return "home";
     }
     
     //---------------------Retrieve List of Adoptions---------------------------------------------------
     @RequestMapping(value = "/records/",method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<List<Record>> getAllRecords()
+    public ResponseEntity<List<Adoption>> getAllRecords()
     {
-        List<Record> record = repository.findAll();
+        List<Adoption> record = repository.findAll();
         if(record.isEmpty())
         {
-            return new ResponseEntity<List<Record>>(HttpStatus.NO_CONTENT);//OR HttpStatus.Not_Found
+            return new ResponseEntity<List<Adoption>>(HttpStatus.NO_CONTENT);//OR HttpStatus.Not_Found
         }
 
-        return new ResponseEntity<List<Record>>(record,HttpStatus.OK);
+        return new ResponseEntity<List<Adoption>>(record,HttpStatus.OK);
     }
 
 
     @RequestMapping(method = RequestMethod.POST)
     public String insertData(ModelMap model, 
-                             @ModelAttribute("insertRecord") @Valid Record record,
+                             @ModelAttribute("insertRecord") @Valid Adoption record,
                              BindingResult result) {
         if (!result.hasErrors()) {
             repository.save(record);
