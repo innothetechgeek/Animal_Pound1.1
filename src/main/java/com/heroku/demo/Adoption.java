@@ -14,17 +14,25 @@ public class Adoption {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     @NotEmpty
-    private String data;
+    private String animalName;
     private String name;
     private String surname;
-    private String phonenumber;
+    private String phoneNumber;
     
-    public String getData() {
-        return data;
+    public String getId() {
+        return id;
     }
     
-    public void setData(String data) {
-        this.data = data;
+    public void setId(String id) {
+        this.id = id;
+    }
+    
+    public String getAnimalName() {
+        return animalName;
+    }
+    
+    public void setAnimalName(String animalName) {
+        this.animalName = animalName;
     }
     public String getName() {
         return name;
@@ -40,9 +48,9 @@ public class Adoption {
         this.surname = surname;
     }
     public String getPhoneNumber() {
-        return phonenumber;
+        return phoneNumber;
     }
-    public void setPhoneNumber(String phonenumber) {
-        this.phonenumber = phonenumber;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 }
