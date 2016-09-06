@@ -1,10 +1,10 @@
 databaseChangeLog:
   - changeSet:
       id: 1
-      author: jkutner
+      author: marceloverdijk
       changes:
         - createTable:
-            tableName: record
+            tableName: person
             columns:
               - column:
                   name: id
@@ -22,15 +22,14 @@ databaseChangeLog:
                   name: name
                   type: varchar(255)
                   constraints:
-                    nullable: true
+                    nullable: false
               - column:
                   name: surname
                   type: varchar(255)
                   constraints:
-                    nullable: true
+                    nullable: false
               - column:
                   name: phonenumber
                   type: varchar(255)
                   constraints:
-                    nullable: true
-                    
+                    nullable: false
