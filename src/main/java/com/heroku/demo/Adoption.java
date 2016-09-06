@@ -15,17 +15,9 @@ public class Adoption {
     private long id;
     @NotEmpty
     private String animal_name;
-    private String name;
+   /* private String name;
     private String surname;
-    private String phone_number;
-    
-    public long getId() {
-        return id;
-    }
-    
-    public void setId(long id) {
-        this.id = id;
-    }
+    private String phone_number;*/
     
     public String getAnimalName() {
         return animal_name;
@@ -34,7 +26,7 @@ public class Adoption {
     public void setAnimalName(String animal_name) {
         this.animal_name = animal_name;
     }
-    public String getName() {
+   /* public String getName() {
         return name;
     }
     public void setName(String name) {
@@ -52,5 +44,5 @@ public class Adoption {
     }
     public void setPhoneNumber(String phone_number) {
         this.phone_number = phone_number;
-    }
+    }*/
 }
