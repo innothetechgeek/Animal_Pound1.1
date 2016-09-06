@@ -23,7 +23,7 @@ public class Adoption {
         return animalname;
     }
     
-    public void setAnimalName(String animal_name) {
+    public void setAnimalName(String animalname) {
         this.animalname = animalname;
     }
    /* public String getName() {
