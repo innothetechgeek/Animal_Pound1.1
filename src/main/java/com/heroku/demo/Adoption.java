@@ -13,7 +13,7 @@ public class Adoption {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    @NotEmpty
+  
     private String animalname;
    /* private String name;
     private String surname;
